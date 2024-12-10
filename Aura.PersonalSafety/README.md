@@ -49,9 +49,20 @@ handling requests and responses for various functionalities such as authenticati
 
 To integrate this project into another application, follow these steps:
 
-### Step 1: Add a Reference
+### Step 1: Add a Reference and appsettings.json
 
 Add the `Aura.PersonalSafety` project to your solution and reference it in your main project.
+```json
+{
+  "ServiceOptions": {
+    "BaseUrl": "https://api.yourservice.com",
+    "PanicApiUrl": "https://api.yourservice.com/panic",
+    "CustomerId": "your-customer-id",
+    "ClientId": "your-client-id",
+    "ClientSecret": "your-client-secret"
+  }
+}
+```
 
 ### Step 2: Configure Services
 
@@ -64,18 +75,20 @@ using Aura.PersonalSafety.Config;
 
 public class Startup
 {
-    public void ConfigureServices(IServiceCollection services)
-    {
-        // Configure ServiceOptions
-        services.Configure<ServiceOptions>(options =>
-        {
-            options.ApiBaseUrl = "https://api.example.com";
-            options.ApiKey = "Your-Api-Key";
-        });
+   public void ConfigureServices(IServiceCollection services)
+   {
+        // Register your services with a dynamic configuration section name
+        services.AddServices(Configuration, "ServiceOptions");
 
-        // Add Aura.PersonalSafety services
-        services.AddAuraServices();
-    }
+        // Add Serilog logging
+        services.AddSerilogLogging(Configuration);
+
+        // Register other services
+        services.AddHttpClient<LeadService>()
+                .AddHttpMessageHandler<AuthorizedHandler>()
+                .ConfigurePrimaryHttpMessageHandler(b => new HttpClientHandler() { AllowAutoRedirect = false })
+                .SetHandlerLifetime(TimeSpan.FromMinutes(30));
+   }
 }
 ```
 
