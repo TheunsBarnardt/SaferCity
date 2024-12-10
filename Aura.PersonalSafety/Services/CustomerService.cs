@@ -4,10 +4,10 @@
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    using global::Aura.Config;
-    using global::Aura.Extensions;
-    using global::Aura.Models.Status;
-    using global::Aura.Models.Users;
+    using global::Aura.PersonalSafety.Config;
+    using global::Aura.PersonalSafety.Extensions;
+    using global::Aura.PersonalSafety.Models.Customer;
+    using global::Aura.PersonalSafety.Models.Status;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
     using Newtonsoft.Json;
