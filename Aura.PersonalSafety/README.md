@@ -3,9 +3,9 @@
 
 ## API Documentation
 
-- **https://personal.aura.services/
-- **https://fixed.aura.services/
-- **https://gateway.aura.services/
+- https://personal.aura.services/
+- https://fixed.aura.services/
+- https://gateway.aura.services/
 
 Aura.PersonalSafety is a C# project designed to provide personal safety services through structured APIs, 
 handling requests and responses for various functionalities such as authentication, chat, callouts, and more.
