@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aura.PersonalSafety", "..\Aura\Aura.PersonalSafety.csproj", "{5DE32A66-08D4-4DD7-B16A-F74994BC76D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DE32A66-08D4-4DD7-B16A-F74994BC76D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE32A66-08D4-4DD7-B16A-F74994BC76D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE32A66-08D4-4DD7-B16A-F74994BC76D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE32A66-08D4-4DD7-B16A-F74994BC76D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DB4D3D5-66CE-4F83-9D34-4C35AFA0750D}
+	EndGlobalSection
+EndGlobal
