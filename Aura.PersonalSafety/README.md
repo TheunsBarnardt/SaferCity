@@ -1,6 +1,11 @@
 
 # Aura.PersonalSafety
 
+## API Documentation
+-** https://personal.aura.services/
+-** https://fixed.aura.services/
+-** https://gateway.aura.services/
+
 Aura.PersonalSafety is a C# project designed to provide personal safety services through structured APIs, 
 handling requests and responses for various functionalities such as authentication, chat, callouts, and more.
 
@@ -55,8 +60,7 @@ Add the `Aura.PersonalSafety` project to your solution and reference it in your 
 ```json
 {
   "ServiceOptions": {
-    "BaseUrl": "https://api.yourservice.com",
-    "PanicApiUrl": "https://api.yourservice.com/panic",
+    "BaseUrl": "https://staging-panic.aura.services/panic-api/v2/",
     "CustomerId": "your-customer-id",
     "ClientId": "your-client-id",
     "ClientSecret": "your-client-secret"
